@@ -1,0 +1,11 @@
+<h4 class="list-group-item-heading">
+     <span class="pull-right"><a class="btn btn-sm edit honor text-info" data-id="{{id}}" data-toggle="tooltip" title="{{t 'edit'}}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="btn btn-xs delete honor text-info" data-toggle="tooltip" data-id="{{id}}" title="{{t 'delete'}}"><span class="glyphicon glyphicon-trash"></span></a>
+    </span>
+</h4>
+<p class="list-group-item-text">
+    <blockquote>
+      <h4 data-container="p" data-toggle="popover" data-placement="top" data-content="{{description}}" data-trigger="hover" style="word-wrap: break-word;" class="text-info aPopover">{{title}}</h4>
+      <footer>{{date}}&#44;&nbsp;{{issuer}}</footer>
+    </blockquote>
+</p>

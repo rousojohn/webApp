@@ -1,0 +1,17 @@
+<h4 class="list-group-item-heading">
+    <span class="pull-right">
+        <a class="btn btn-sm edit orgs text-info" data-id="{{id}}" data-toggle="tooltip" title="{{t 'edit'}}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="btn btn-xs delete orgs text-info" data-toggle="tooltip" data-id="{{id}}" title="{{t 'delete'}}"><span class="glyphicon glyphicon-trash"></span></a>
+    </span>
+    <p style="word-wrap: break-word;" data-toggle="popover" data-placement="top" data-content="{{description}}" data-trigger="hover" class="text-info aPopover">{{name}}</p>
+</h4>
+<p class="list-group-item-text">
+    <div class="pull left well well-sm" style="word-wrap: break-word;">
+        <p>{{position}}</p>
+        <small>
+            <span class="glyphicon glyphicon-calendar"></span> {{date_from}} &minus; <span id="dateTo-{{id}}" class="dateTo hidden">{{date_to}}</span>
+            <span class="present" id="present-{{id}}">{{t "present"}}</span>
+            </small>
+    </div>
+</p>
+ 

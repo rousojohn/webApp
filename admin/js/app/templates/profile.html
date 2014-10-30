@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row">
+<!--
+        <div class="col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <p>Account</p>
+            </div>
+            <div class="panel-body">
+                <div class="well well-lg">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="username" class="control-label">UserName</label>
+                            <input type="text" class="form-control" id="username" placeholder="Username" required="required" value="" />
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pass" class="control-label">Password</label>
+                            <input type="password" id="pass" class="form-control" placeholder="Password" required="required" value="" />
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPass" class="control-label">Confirm Password</label>"
+                            <input type="password" id="confirmPass" class="form-control" placeholder="Confirm Password" required="required" value="" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+            </div>
+-->
+        
+<!--
+        <div class="col-sm-12">
+            <h1>Change Password</h1>
+        </div>
+-->
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <p class="text-center">{{t "Change pass"}}</p>
+            <p class="text-center">{{t "NotTheSame"}}</p>
+            <form method="post" id="passwordForm">
+                <div class="form-group">
+                    <label class="control-label sr-only" for="username">Username</label>
+                    <input type="text" value="{{username}}" class="input-sm form-control" name="username" id="username" disabled="disabled"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label sr-only" for="password1">{{t "NewPass"}}</label>
+                    <input type="password" class="input-sm form-control" name="password1" id="password1" placeholder="{{t 'NewPass'}}" autocomplete="off">
+                    </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <span id="8char" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span>{{t "Length"}}<br>
+                        <span id="ucase" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> {{t "Uppercase"}}
+                    </div>
+                    <div class="col-sm-4">
+                        <span id="lcase" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> {{t "Lowercase"}}<br>
+                        <span id="num" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> {{t "Number"}}
+                    </div>
+                    <div class="col-sm-4">
+                        <span id="usernamesame" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> {{t "Same"}}
+                    </div>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label class="control-label sr-only" for="password2">{{t "RepeatPassLbl"}}</label>
+                    <input type="text" class="input-sm form-control" name="password2" id="password2" placeholder="{{t 'rptPass'}}" autocomplete="off"/>
+                    </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span id="pwmatch" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> {{t "Passwords Match"}}
+                    </div>
+                </div>
+                <button type="submit" class="col-xs-12 btn btn-primary btn-load btn-lg" id="ChangePassBtn">{{t "ChangePasswordBtn"}}</button>
+            </form>
+        </div><!--/col-sm-6-->
+    </div>
+</div>

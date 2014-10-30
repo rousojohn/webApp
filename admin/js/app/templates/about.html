@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="well well-lg">
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend>{{t "About Me"}}</legend>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="imgLink">{{t "photo"}}</label>
+                        <div class="col-lg-10"  id="fileDiv">
+                            <input type="file" class="form-control modelCols" id="imgLink" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="summary">{{t "summary"}}</label>
+                        <div class="col-lg-10">
+                            <textarea id="summary" class="form-control" rows="10">{{about}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-lg-10 col-lg-offset-2">
+                        <button class="btn btn-default" id="cancelBtn">{{t "cancel"}}</button>
+                        <button type="submit" class="btn btn-primary" id="saveBtn">{{t "save"}}</button>
+                      </div>
+                    </div>                  
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

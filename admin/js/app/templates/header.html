@@ -1,0 +1,73 @@
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a id="clientName" class="navbar-brand" href="#main"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="statisticsLink">
+      <ul class="nav navbar-nav hidden">
+        <li class="active"><a href="#main">{{t "news"}}</a></li>
+        <li><a href="#profile/{{id}}" id="#profile">{{t "profile"}}</a></li>
+        <li><a href="#about/{{id}}" id="#about">{{t "about"}}</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{t "more"}} <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+              <li><a href="#personal/{{id}}">{{t "personal"}}</a></li>
+              <li class="divider"></li>
+              <li><a href="#educationHistory/{{id}}">{{ t "education" }}</a></li>
+              <li class="divider"></li>
+              <li><a href="#employment/{{id}}">{{t "employment"}}</a></li>
+              <li class="divider"></li>
+              <li><a href="#activities/{{id}}">{{t "activities"}}</a></li>
+            </ul>
+          </li>
+        </ul>
+<!--
+      <form class="navbar-form navbar-left hidden" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="{{t 'Search'}}">
+        </div>
+          <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+      </form>
+-->
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> {{t "options"}} <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu">
+              
+              <li class="menu-item dropdown dropdown-submenu">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <span class="glyphicon glyphicon-flag"></span> {{t "language" }} 
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li class="lang" data-value="en">
+                          <a href="#"><span id="en" class="glyphicon"></span> {{t "English"}} </a>
+                      </li>
+                      <li class="lang" data-value="el">
+                          <a href="#"><span id="el" class="glyphicon"></span> {{t "Greek"}} </a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="hidden"><a href="#" id="logout"><span class="glyphicon glyphicon-off"></span> {{t "Logout"}} </a></li>
+<!--
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+-->
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

@@ -1,0 +1,20 @@
+<h4 class="list-group-item-heading">
+    <a href="{{link}}" target="_blank"data-container="p" data-toggle="popover" data-placement="top" data-content="{{description}}" data-trigger="hover" style="word-wrap: break-word;" class="text-info aPopover">{{name}}</a>
+    <span class="pull-right">
+        <a class="btn btn-sm edit project text-info" data-id="{{id}}" data-toggle="tooltip" title="{{t 'edit'}}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="btn btn-xs delete project text-info" data-toggle="tooltip" data-id="{{id}}" title="{{t 'delete'}}"><span class="glyphicon glyphicon-trash"></span></a>
+    </span>
+</h4>
+<p class="list-group-item-text">
+    <span class="pull left" style="word-wrap: break-word;">
+        {{comp}}
+    </span> <br />
+   <span class="pull left" style="word-wrap: break-word;">
+        {{team_members}}
+    </span> <br />
+    <span class="pull left">
+        <span class="glyphicon glyphicon-calendar">&nbsp;</span> {{date_from}} &minus; <span id="dateTo-{{id}}" class="dateTo hidden">{{date_to}}</span>
+        <span class="present" id="present-{{id}}">{{t "current"}}</span>
+    </span>
+</p>
+ 

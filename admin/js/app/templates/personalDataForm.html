@@ -1,0 +1,26 @@
+<form id="personalForm">
+    <div class="form-group col-md-6">
+        <label for="name" class="control-label">{{t "name"}}</label>
+        <input type="text" class="form-control input-sm personal" placeholder="{{t 'name'}}" value="{{name}}" id="name" required="required" id="name" />
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="surname" class="control-label">{{t "surname"}}</label>
+        <input type="text" class="form-control input-sm personal" placeholder="{{t 'surname'}}" id="surname" value="{{surname}}" required="required" id="surname" />
+    </div>
+
+    <div class="form-group col-md-12">
+        <label class="control-label">{{t "title"}}</label>
+        <input type="text" class="form-control input-sm personal" placeholder="{{t 'title'}}" value="{{title}}" id="title" required="required" id="title" />
+    </div>
+
+    <div class="form-group col-md-3">
+        <label class="control-label">{{t "birthdate"}}</label>
+        <input type="date" class="form-control input-sm personal" value="{{birthdate}}" placeholder="{{t 'birthdate'}}" id="birthdate" />
+    </div>
+
+    <div class="form-group col-md-3 pull-right">
+        <label class="control-label">{{t "im"}}</label>
+        <input type="text" class="form-control input-sm personal" value="{{IM}}" placeholder="{{t 'im'}}" id="im" />
+    </div>
+</form>

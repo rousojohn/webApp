@@ -1,0 +1,17 @@
+<h4 class="list-group-item-heading">
+    <a target="_blank"data-container="p" data-toggle="popover" data-placement="top" data-content="{{review}}" data-trigger="hover" style="word-wrap: break-word;" class="text-info aPopover">{{code}}&nbsp;&minus;&nbsp;{{title}}</a>
+    <span class="pull-right">
+        <a class="btn btn-sm edit courses text-info" data-id="{{id}}" data-toggle="tooltip" title="{{t 'edit'}}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="btn btn-xs delete courses text-info" data-toggle="tooltip" data-id="{{id}}" title="{{t 'delete'}}"><span class="glyphicon glyphicon-trash"></span></a>
+    </span>
+</h4>
+<p class="list-group-item-text">
+   <span class="pull left" style="word-wrap: break-word;">
+        {{co_teachers}}
+    </span> <br />
+    <span class="pull left">
+        <span class="glyphicon glyphicon-calendar">&nbsp;</span> {{courses_from}} &minus; <span id="dateTo-{{id}}" class="dateTo hidden">{{courses_to}}</span>
+        <span class="present" id="present-{{id}}">{{t "current"}}</span>
+    </span>
+</p>
+ 

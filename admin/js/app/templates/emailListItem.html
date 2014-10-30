@@ -1,0 +1,12 @@
+<h4 class="list-group-item-heading">
+    <a class="text-info">{{emailType}}</a>
+    <span class="pull-right">
+        <a class="btn btn-sm edit email text-info" data-id="{{id}}" data-toggle="tooltip" title="{{t 'edit'}}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="btn btn-xs delete email text-info" data-toggle="tooltip" data-id="{{id}}" title="{{t 'delete'}}"><span class="glyphicon glyphicon-trash"></span></a>
+    </span>
+</h4>
+<p class="list-group-item-text">
+    <div class="pull left well well-sm" style="word-wrap: break-word;">
+        <span class="glyphicon glyphicon-envelope">&nbsp;</span><!--<span><big><b>&#64;</b></big>&nbsp;</span>-->{{email}}
+    </div>
+</p>

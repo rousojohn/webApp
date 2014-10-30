@@ -1,0 +1,176 @@
+<div class="panel panel-info">
+     <div class="panel-heading">{{t "filters"}}</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="chain">{{t "chain"}}&nbsp;</label>
+                <select class="form-control" id="chain">
+                    <option value="00000000-0000-0000-0000-000000000000" selected></option>
+                </select>
+                <label for="week">{{t "week"}}&nbsp;</label>
+                <select class="form-control" id="week">
+                    <option value="0" selected></option>
+                </select>
+            </div>
+            <div class="col-md-3">
+              <label for="fromDate">{{t "from"}}&nbsp;</label>
+              <input class="form-control" id="fromDate" type="date"/>
+              <label for="toDate">{{t "to"}}&nbsp;</label>
+              <input class="form-control" id="toDate" type="date"/>
+            </div>
+            <div class="col-md-3">
+                <label for="month">{{t "month"}}&nbsp;</label>
+                <select class="form-control" id="month">
+                  <option value="0" selected></option>
+                </select>
+                <label for="product">{{t "product"}}&nbsp;</label>
+                <select class="form-control" id="product">
+                    <option value="0" selected></option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="city">{{t "city"}}&nbsp;</label>
+                <select class="form-control" id="city">
+                    <option value="" selected></option>
+                </select>
+                <label for="region">{{t "region"}}&nbsp;</label>
+                <select class="form-control" id="region">
+                    <option value="" selected></option>
+                </select>
+            </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <label id="promoLabel" for="promoter">{{t "promoter"}}&nbsp;</label>
+            <select class="form-control" id="promoter">
+                <option value="00000000-0000-0000-0000-000000000000" selected></option>
+            </select>
+          </div>
+        </div>
+        </br>
+        <button id="execute" class="btn btn-primary pull-right">{{t "execute"}}</button>
+    </div>
+</div>
+<br/>
+<div class="ssr_reportViewerControl">
+    <!--Toolbar panel, contains print and exports button-->
+    <div id="ssr_toolBarPanel" class="ssr_toolBar">
+        <div class="ssr_toolButtonContainer">
+            <div id="ssr_printButton" class="ssr_toolButton ssr_printButtonDisable" title="Print">
+            </div>
+        </div>
+        <div class="ssr_toolButtonContainer">
+            <div id="ssr_rtfExportButton" class="ssr_toolButton ssr_rtfButtonDisable" title="Export to Rtf">
+            </div>
+        </div>
+        <div class="ssr_toolButtonContainer">
+            <div id="ssr_pdfExportButton" class="ssr_toolButton ssr_pdfButtonDisable" title="Export to Pdf">
+            </div>
+        </div>
+        <div class="ssr_toolButtonContainer">
+            <div id="ssr_excelExportButton" class="ssr_toolButton ssr_excelButtonDisable" title="Export to Excel">
+            </div>
+        </div>
+        <div class="ssr_toolButtonContainer">
+            <div id="ssr_htmlExportButton" class="ssr_toolButton ssr_htmlButtonDisable" title="Export to Html">
+            </div>
+        </div>
+        <div class="ssr_toolButtonContainer">
+            <div id="ssr_xpsExportButton" class="ssr_toolButton ssr_xpsButtonDisable" title="Export to Xps">
+            </div>
+        </div>
+        <div class="ssr_toolButtonContainer">
+            <div id="ssr_xlsxExportButton" class="ssr_toolButton ssr_xlsxButtonDisable" title="Export to OpenXml Excel">
+            </div>
+        </div>
+        <div class="ssr_toolButtonContainer">
+            <div id="ssr_zoomInButton" class="ssr_toolButton ssr_zoomInButtonDisable" title="Zoom in">
+            </div>
+        </div>
+        <div class="ssr_toolButtonContainer">
+            <div id="ssr_zoomOutButton" class="ssr_toolButton ssr_zoomOutButtonDisable" title="Zoom out">
+            </div>
+        </div>
+    </div>
+    <div class="ssr_centralDiv">
+        <!--Contains thumbnails and documentMap elements-->
+        <div class="ssr_navigationArea" id="ssr_navigationAreaElement">
+            <div class="ssr_navigationIconPanel" id="ssr_navigationIconPanel">
+                <div class="ssr_thumbnailButtonContainer" id="ssr_thumbnailButtonContainer">
+                    <!--shows or hides thumbnail element-->
+                    <div title="Thumbnails" id="ssr_thumbnailButton" class="ssr_thumbnailButton ssr_thumbnailButtonDisable">
+                    </div>
+                </div>
+                <div class="ssr_documentMapButtonContainer" id="ssr_documentMapButtonContainer">
+                    <!--shows or hides document map element-->
+                    <div title="Document Map" id="ssr_documentMapButton" class="ssr_documentMapButton ssr_documentMapButtonDisable">
+                    </div>
+                </div>
+            </div>
+            <div id="ssr_thumbnailsPanel" class="ssr_thumbnailsPanel">
+                <div id="ssr_thumbnailHeadPanel" class="ssr_thumbnailHeadPanel">
+                    <span class="ssr_thumbnailHeadPanelTitle">Thumbnails</span>
+                    <div title="Close" id="ssr_closeThumbnailPanelButton" class="ssr_closeThumbnailPanelButton">
+                    </div>
+                </div>
+                <div id="ssr_wrapThumbnailContentPanel" class="ssr_wrapThumbnailContentPanel">
+                    <!--element which contains a list of thumbnail-->
+                    <div id="ssr_thumbnailContentPanel" class="ssr_thumbnailContentPanel">
+                    </div>
+                </div>
+            </div>
+            <div id="ssr_documentMapPanel" class="ssr_documentMapPanel">
+                <div id="ssr_documentMapHeadPanel" class="ssr_documentMapHeadPanel">
+                    <span class="ssr_documentMapHeadPanelTitle">Document Map</span>
+                    <div title="Close" id="ssr_closeDocumentMapPanelButton" class="ssr_closeThumbnailPanelButton">
+                    </div>
+                </div>
+                <div id="ssr_wrapDocumentMapContentPanel" class="ssr_wrapDocumentMapContentPanel">
+                    <!--element which contains a document map-->
+                    <div id="ssr_documentMapContentPanel" class="ssr_documentMapContentPanel">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--reports will be shows in this element-->
+        <div id="ssr_reportContent" class="ssr_reportArea">
+        </div>
+    </div>
+    <!--Statusbar panel-->
+    <div id="ssr_statusBarPanel" class="ssr_statusPanel">
+        <div id="ssr_paginationPanel" class="ssr_paginationPanel">
+            <div class="ssr_statusButtonContainer ssr_statusButtonContainerBack">
+                <div id="ssr_firstPageButton" class="ssr_statusButton ssr_statusButtonBack ssr_firstPageDisable">
+                </div>
+            </div>
+            <div class="ssr_statusButtonContainer ssr_statusButtonContainerBack">
+                <div id="ssr_previousPageButton" class="ssr_statusButton ssr_statusButtonBack ssr_previousPageDisable">
+                </div>
+            </div>
+            <div class="ssr_statusCurrentPageContainer">
+                <!--displays the current page number-->
+                <input id="ssr_currentPageNumberBox" class="ssr_currentPageNumber" title="Current page" />
+                <span class="ssr_pageCountOf">of</span><span> </span><span id="ssr_pageCountBox"
+                    class="ssr_pageCount">0</span>
+            </div>
+            <div class="ssr_statusButtonContainer ssr_statusButtonContainerForward">
+                <div id="ssr_nextPageButton" class="ssr_statusButton ssr_statusButtonForward ssr_nextPageDisable">
+                </div>
+            </div>
+            <div class="ssr_statusButtonContainer ssr_statusButtonContainerForward">
+                <div id="ssr_lastPageButton" class="ssr_statusButton ssr_statusButtonForward ssr_lastPageDisable">
+                </div>
+            </div>
+        </div>
+        <!--Shows or hides error dialog-->
+        <div id="ssr_notificationPanel" class="ssr_notificationPanel">
+            <div id="ssr_errorButton" class="ssr_errorButton ssr_errorButtonDisable">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ssr_errorDialog" title="Error information" style="display: none;">
+    <div id="ssr_errorMessage" class="ssr_errorMessageContent">
+    </div>
+</div>

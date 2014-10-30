@@ -1,0 +1,241 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <h4 class="panel-title pull-left" style="padding-top: 7.5px;">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">{{t "publications"}} <b class="caret"></b></a>
+                    </h4>
+                    <div class="btn-group pull-right">
+                        <button type="button" id="addPublication" class="btn btn-sm btn-success btn-add btnaddPublication" data-toggle="tooltip" title="{{t 'add'}}">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                    </div>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                    <div class="panel-body" id="publicationsRegion"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <h4 class="panel-title pull-left" style="padding-top: 7.5px;">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">{{t "organizations"}} <b class="caret"></b></a>
+                    </h4>
+                    <div class="btn-group pull-right">
+                        <button type="button" id="addOrganization" class="btn btn-sm btn-success btn-add btnaddOrg" data-toggle="tooltip" title="{{t 'add'}}">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                    </div>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body" id="organizationsRegion"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <h4 class="panel-title pull-left" style="padding-top: 7.5px;">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">{{t "honorsAwards"}} <b class="caret"></b></a>
+                    </h4>
+                    <div class="btn-group pull-right">
+                        <button type="button" id="addHonor" class="btn btn-sm btn-success btn-add btnaddHonor" data-toggle="tooltip" title="{{t 'add'}}">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                    </div>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body" id="honorsRegion"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+         <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <h4 class="panel-title pull-left" style="padding-top: 7.5px;">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">{{t "interests"}} <b class="caret"></b></a>
+                    </h4>
+                    <div class="btn-group pull-right">
+                        <button type="button" id="addInterest" class="btn btn-sm btn-success btn-add btnaddInterest" data-toggle="tooltip" title="{{t 'add'}}">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                    </div>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse">
+                    <div class="panel-body" id="interestRegion"></div>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+
+
+<!--************************************ MODALS *******************************************************-->
+
+<!--    PUBLICATION MODAL -->
+
+
+<div class="modal fade" id="publicationModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="panel panel-default">
+            <div class="panel-heading">{{t "editPublication"}}</div>
+            <div class="panel-body">
+                 <form id="editFormPublication" role="form">
+                    <div class="form-group">
+                        <label for="publicationTitle" class="sr-only">{{t 'title'}}</label>
+                        <input type="text" class="form-control input-sm" id="publicationTitle" value="{{title}}"  placeholder="{{t 'title'}}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="publicationAuthors" class="sr-only">{{t 'authors'}}</label>
+                        <input type="text" id="publicationAuthors" class="form-control input-sm" value="{{authors}}"  placeholder="{{t 'authors'}}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="publicationPublisher" class="sr-only">{{t 'publisher'}}</label>
+                        <input type="text" id="publicationPublisher" class="form-control input-sm" placeholder="{{t 'publisher'}}" value="{{publisher}}" />
+                    </div>
+                     <div class="form-group">
+                        <label for="publicationDate" class="control-label">{{t "date"}}</label>
+                         <input type="date" id="publicationDate" class="form-control input-sm" placeholder="{{t 'date'}}" value="{{date}}" />
+                     </div>
+                    <div class="form-group">
+                        <label for="publicationLink" class="sr-only">{{t 'link'}}</label>
+                        <input type="url" id="publicationLink"  class="form-control input-sm" placeholder="http://" value="{{link}}"/>
+                    </div>
+                     <div class="form-group">
+                        <textarea id="publicationDesc" style="resize: vertical;" placeholder="{{t 'description'}}" class="form-control" rows="5">{{description}}</textarea>
+                    </div>
+                    <a class="btn btn-sm btn-success" id="publicationSave" >{{t 'save'}}</a>
+                </form>
+                </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<!--    ! PUBLICATION MODAL -->
+
+<!--    HONORS MODAL -->
+
+
+
+<div class="modal fade" id="honorsModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+        <div class="panel panel-default">
+            <div class="panel-heading">{{t "editHonors"}}</div>
+            <div class="panel-body">
+                <form id="editFormHonors" role="form">
+                    <div class="form-group">
+                        <label for="honorTitle" class="control-label">{{t 'title'}}</label>
+                        <input type="text" class="form-control input-sm" id="honorTitle" value="{{title}}"  placeholder="{{t 'title'}}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="honorIssuer" class="control-label">{{t 'issuer'}}</label>
+                        <input type="text" class="form-control input-sm" id="honorIssuer" value="{{issuer}}" placeholder="{{t 'issuer'}}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="honorDate" class="control-label">{{t 'date'}}</label>
+                        <input type="date" class="form-control input-sm" id="honorDate" value="{{date}}" placeholder="{{t 'date'}}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="honorDesc" class="sr-only">{{t "level"}}</label>
+                       <textarea id="honorDesc" style="resize: vertical;" placeholder="{{t 'description'}}" class="form-control" rows="5">{{description}}</textarea>
+                    </div>
+                    
+                    <a class="btn btn-sm btn-success" id="honorSave" >{{t 'save'}}</a>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--    ! HONORS MODAL-->
+
+<!--    INTERESTS MODAL -->
+
+
+<div class="modal fade" id="interestModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="panel panel-default">
+            <div class="panel-heading">{{t "editInterest"}}</div>
+            <div class="panel-body">
+                <form id="editFormInterest" role="form">
+                    <div class="form-group">
+                        <label for="interestDesc" class="sr-only">{{t 'description'}}</label>
+                        <textarea id="interestDesc" style="resize: vertical;" placeholder="{{t 'description'}}" class="form-control" rows="5">{{description}}</textarea>
+                    </div>
+                    <a class="btn btn-sm btn-success" id="interestSave" >{{t 'save'}}</a>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<!--    ! INTERESTS MODAL-->
+
+<!--    ORGANIZATIONS MODAL -->
+
+
+
+<div class="modal fade" id="orgsModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="panel panel-default">
+            <div class="panel-heading">{{t "editOrganization"}}</div>
+            <div class="panel-body">
+                <form id="editFormOrg" role="form">
+                    <div class="form-group">
+                        <label class="control-label" for="orgName">{{t 'name'}}</label>
+                        <input type="text" class="form-control input-sm" id="orgName" placeholder="{{t 'name'}}" value="{{name}}" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="orgPosition">{{ t 'position'}}</label>
+                        <input type="text" class="form-control input-sm" id="orgPosition" placeholder="{{t 'position'}}" value="{{position}}" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="orgFrom">{{t 'from'}}</label>
+                        <input type="date" id="orgFrom" class="form-control input-sm" value="{{date_from}}" placeholder="{{t 'from'}}" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="orgTo">{{t 'to'}}</label>
+                        <input type="date" id="orgTo" class="form-control input-sm" value="{{date_to}}" placeholder="{{t 'to'}}" />
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="orgCurrent" />
+                            {{t "currentPosition"}}
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="orgDesc" class="sr-only">{{t 'description'}}</label>
+                        <textarea id="orgDesc" style="resize: vertical;" placeholder="{{t 'description'}}" class="form-control" rows="5">{{description}}</textarea>
+                    </div>
+                    <a class="btn btn-sm btn-success" id="orgSave" >{{t 'save'}}</a>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--    ! ORGANIZATIONS MODAL-->
+
+
+
